@@ -11,6 +11,7 @@ const IndexPage = () => (
     <h1>Witojcie ludziska</h1>
     <p>Witojcie w naszej bajce. Gdzie kelner lata po niebie :)</p>
     <p>Cos tu jeszzcze zmienimy, co ty na to?</p>
+    <Link to="<www.onet.pl">New link</Link>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>

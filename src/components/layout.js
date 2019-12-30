@@ -26,7 +26,6 @@ const Layout = ({ children }) => {
 
   return (
     <>
-          <div className="application">
         <Helmet>
           <meta charSet="utf-8" />
           <title>My Title is Szymon</title>
@@ -38,14 +37,13 @@ const Layout = ({ children }) => {
                     passthrough : {
                       twitter: {
                         via: "CleverClickMe",
-                        // hashtags: "javascript,react"
+                        hashtags: "javascript,react, SzymonCode"
                       }
                     },
                   }
                 `}
                   </script>
         </Helmet>
-      </div>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{

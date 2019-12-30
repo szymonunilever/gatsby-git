@@ -6,6 +6,7 @@
  */
 
 import React from "react"
+import { Helmet } from "react-helmet"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -25,6 +26,26 @@ const Layout = ({ children }) => {
 
   return (
     <>
+          <div className="application">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>My Title is Szymon</title>
+          <link rel="canonical" href="http://mysite.com/example" />
+          <script type="text/javascript">
+                    {`
+                  var addthis_share = {
+                    url: "${data.site.siteMetadata.siteUrl}",
+                    passthrough : {
+                      twitter: {
+                        via: "CleverClickMe",
+                        // hashtags: "javascript,react"
+                      }
+                    },
+                  }
+                `}
+                  </script>
+        </Helmet>
+      </div>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
@@ -42,6 +63,7 @@ const Layout = ({ children }) => {
         </footer>
       </div>
     </>
+    
   )
 }
 

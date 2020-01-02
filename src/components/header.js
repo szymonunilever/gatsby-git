@@ -28,6 +28,32 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1>
     </div>
+    <ul style={{
+         background:`grey`,
+         margin:`0 auto`,
+         width: `960px`,
+        }}>
+      <li style={{
+        display:`inline-block`,
+        margin: `10px`,
+      }}
+      >
+        <Link style={{
+         color: `#ffffff`,
+        }}
+        to="/">Home</Link></li>
+      <li
+      style={{
+        display:`inline-block`,
+        color: `#ffffff`,
+        margin: `0 10px`,
+      }}
+      >
+        <Link style={{
+         color: `#ffffff`,
+        }}
+         to="/about">About</Link></li>
+    </ul>
   </header>
 )
 

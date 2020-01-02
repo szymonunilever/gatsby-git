@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
         <Helmet>
           <meta charSet="utf-8" />
           <title>My Title is Szymon</title>
-          <link rel="canonical" href="http://mysite.com/example" />
+          <link rel="canonical" href="https://musing-hermann-232a26.netlify.com/" />
           <script type="text/javascript">
                     {`
                   var addthis_share = {

@@ -9,6 +9,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
@@ -28,6 +29,14 @@ const Layout = ({ children }) => {
     <>
         <Helmet>
           <meta charSet="utf-8" />
+
+          <meta property="og:url" content="https://musing-hermann-232a26.netlify.com/" />
+          <meta property="og:type" content="Szymon article" />
+          <meta property="og:title" content="Szymon Title" />
+          <meta property="og:description" content="Szymon Description of article." />
+          <meta property="og:image" content="https://homepages.cae.wisc.edu/~ece533/images/airplane.png" />
+
+
           <title>My Title is Szymon</title>
           <link rel="canonical" href="https://musing-hermann-232a26.netlify.com/" />
           <script type="text/javascript">
@@ -57,7 +66,7 @@ const Layout = ({ children }) => {
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <Link to="">Home page</Link>
         </footer>
       </div>
     </>

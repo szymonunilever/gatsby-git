@@ -8,7 +8,7 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Witojcie ludziska</h1>
+    <h1>Hey Beautiful People from far galaxy!!!</h1>
     <p>Witojcie w naszej bajce. Gdzie kelner lata po niebie :)</p>
     <p>Cos tu jeszzcze zmienimy, co ty na to?</p>
     <Link to="<www.onet.pl">New link</Link>

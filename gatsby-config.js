@@ -1,3 +1,7 @@
+// Load the environment variables.
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -12,6 +16,17 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: 'gatsby-transformer-cloudinary',
+      options: {
+        cloudName: `jam-unilever`,
+        apiKey: `796588834679741`,
+        apiSecret: `aEzpY_ihBY_fm6c5qdqMWRC-kMs`,
+
+        // This folder will be created if it doesn’t exist.
+        uploadFolder: 'gatsby-cloudinary',
       },
     },
     `gatsby-transformer-sharp`,

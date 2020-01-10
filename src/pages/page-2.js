@@ -1,16 +1,19 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import Image from 'gatsby-image';
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+export default () => {
+  const data = useStaticQuery(graphql`
+    query {
+      file(name: { eq: "avatar" }) {
+        childCloudinaryAsset {
+          fluid {
+            ...CloudinaryAssetFluid
+          }
+        }
+      }
+    }
+  `);
 
-const SecondPage = () => (
-  <Layout>
-    <SEO title="Page two" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
-  </Layout>
-)
-
-export default SecondPage
+  return <Image fluid={data.file.childCloudinaryAsset.fluid} alt="avatar" />;
+};

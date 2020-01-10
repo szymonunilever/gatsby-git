@@ -60,6 +60,28 @@ const Header = ({ siteTitle }) => (
          color: `#ffffff`,
         }}
          to="/about">About</Link></li>
+               <li
+      style={{
+        display:`inline-block`,
+        color: `#ffffff`,
+        margin: `0 10px`,
+      }}
+      >
+        <Link style={{
+         color: `#ffffff`,
+        }}
+         to="/page-2">Page2</Link></li>
+               <li
+      style={{
+        display:`inline-block`,
+        color: `#ffffff`,
+        margin: `0 10px`,
+      }}
+      >
+        <Link style={{
+         color: `#ffffff`,
+        }}
+         to="/page-3">Page3</Link></li>
     </ul>
   </header>
 )
